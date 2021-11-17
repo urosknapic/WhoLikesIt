@@ -24,8 +24,23 @@ namespace WhoLikesIt
 
     Note: For 4 or more names, the number in "and 2 others" simply increases.
      */
-    public static string Likes(string[] name)
+    public static string Likes(string[] names)
     {
+      // Make simpliest way to make tests pass
+      // taking small steps;
+      if(names.Length == 1)
+      {
+        return $"{names[0]} likes this";
+      }
+      if(names.Length == 2)
+      {
+        return $"{names[0]} and {names[1]} like this";
+      }
+      if(names.Length == 3)
+      {
+        return $"{names[0]}, {names[1]} and {names[2]} like this";
+      }
+
       return "no one likes this";
     }
   }
