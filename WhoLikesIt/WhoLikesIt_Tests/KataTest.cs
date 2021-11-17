@@ -28,7 +28,7 @@ namespace WhoLikesIt_Tests
     }
 
     [TestMethod]
-    public void Kata_When2Names_Return1And2LikeThis()
+    public void Kata_When2Names_Return1And2LikesThis()
     {
       string[] names = new string[] { "Jacob", "Alex" };
       string output = Kata.Likes(names);
@@ -36,7 +36,7 @@ namespace WhoLikesIt_Tests
     }
 
     [TestMethod]
-    public void Kata_When3Names_Return12And3LikeThis()
+    public void Kata_When3Names_Return12And3LikesThis()
     {
       string[] names = new string[] { "Max", "John", "Mark" };
       string output = Kata.Likes(names);
@@ -45,6 +45,22 @@ namespace WhoLikesIt_Tests
       string[] secondNames = new string[] { "Uros", "Anja", "Mark" };
       string secondOutput = Kata.Likes(secondNames);
       Assert.AreEqual(secondOutput, "Uros, Anja and Mark like this");
+    }
+
+    [TestMethod]
+    public void Kata_When4Names_Return12AndNumberOfWhoLikesThis()
+    {
+      string[] names = new string[] { "Alex", "Jacob", "Mark", "Max" };
+      string output = Kata.Likes(names);
+      Assert.AreEqual(output, "Alex, Jacob and 2 others like this");
+    }
+
+    [TestMethod]
+    public void Kata_When5Names_Return12AndNumberOfWhoLikesThis()
+    {
+      string[] names = new string[] { "Alex", "Jacob", "Mark", "Max", "Uros" };
+      string output = Kata.Likes(names);
+      Assert.AreEqual(output, "Alex, Jacob and 3 others like this");
     }
   }
 }
