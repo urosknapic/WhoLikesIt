@@ -1,13 +1,14 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace WhoLikesIt_Tests
 {
   [TestClass]
-  public class UnitTest1
+  public class KataTest
   {
     [TestMethod]
     public void TestMethod1()
     {
+
     }
   }
 }
